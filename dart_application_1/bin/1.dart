@@ -13,14 +13,11 @@ void main() {
   var mx;
 
 //Присвоение max/min значений
-  if (n1 > n2) {
+  if (n1 >= n2) {
     mn = n2;
     mx = n1;
   } else if (n1 < n2) {
     mn = n1;
-    mx = n2;
-  } else {
-    mn = n2;
     mx = n2;
   }
 

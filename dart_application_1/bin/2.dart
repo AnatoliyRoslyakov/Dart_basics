@@ -1,19 +1,32 @@
 import "dart:io";
+import 'dart:convert';
+import 'dart:math';
 
 void main(List<String> arguments) {
-//Ввод
-  print("Введи число:");
+  print("Введи ДЕСЯТИЧНОЕ число:");
   num n = num.parse(stdin.readLineSync()!);
   var str = '';
+  var i = 0;
+  List<int> listI = []; // Под номер итерации
+  List listStr = []; // Под формирование двоичного значения
   var div = n ~/ 2; // Целая часть от деления
   var mod = n % 2; // Остаток от деления
-  var i = 0;
   for (; div > 0;) {
-    str += mod.toString();
+    str += mod.toString(); // Для вывода в терминал
+    listStr.add(pow(2, i) * mod); // Для обратного перевода в 10-ю
     div = n ~/ 2;
     n = div;
     mod = n % 2;
+    i++;
   }
-  print('Из 10-ой в 2-ую СС:');
-  print(str.split('').reversed.join()); // Развернул строчку
+  // Разворот строки для корректного представления числа
+  var strRev = str.split('').reversed.join();
+
+  var sum = listStr.reduce((a, b) => a + b);
+  print('Из 10 --> 2 СС: $strRev');
+  print('Из 2 --> 10 СС: $sum');
 }
+  // Реализовать метод перевода из 2 --> 10 получилось на основе перевода
+  // из 10 --> 2 :) Пока писал, думал что выплыву во что-то дельное,
+  // а по сути реализовал только математику метода.
+
