@@ -1,7 +1,3 @@
-import "dart:io";
-import 'dart:convert';
-import 'dart:math';
-
 void main(List<String> arguments) {
   String text = 'Хо4у 8ывести число-48, нажми RUUUUUUN';
   List lst1 = text.split(' '); // Разбивает предложение на лист слов

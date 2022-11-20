@@ -1,22 +1,21 @@
 import "dart:io";
-import 'dart:convert';
 import 'dart:math';
 
 void main(List<String> arguments) {
   print("Введи ДЕСЯТИЧНОЕ число:");
-  num n = num.parse(stdin.readLineSync()!);
+  num n1 = num.parse(stdin.readLineSync()!);
   var str = '';
   var i = 0;
   List<int> listI = []; // Под номер итерации
   List listStr = []; // Под формирование двоичного значения
-  var div = n ~/ 2; // Целая часть от деления
-  var mod = n % 2; // Остаток от деления
+  var div = n1 ~/ 2; // Целая часть от деления
+  var mod = n1 % 2; // Остаток от деления
   for (; div > 0;) {
     str += mod.toString(); // Для вывода в терминал
     listStr.add(pow(2, i) * mod); // Для обратного перевода в 10-ю
-    div = n ~/ 2;
-    n = div;
-    mod = n % 2;
+    div = n1 ~/ 2;
+    n1 = div;
+    mod = n1 % 2;
     i++;
   }
   // Разворот строки для корректного представления числа
