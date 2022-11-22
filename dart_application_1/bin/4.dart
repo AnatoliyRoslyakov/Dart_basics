@@ -1,4 +1,4 @@
-void main(List<String> args) {
+void main() {
   var wordsList = ['a', 'b', 'a', 'a', 'one', 'one', 'one', 'three', 'six'];
   // Строка в лист
   // Возврат индекса строки
