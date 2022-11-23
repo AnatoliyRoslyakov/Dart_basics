@@ -1,5 +1,3 @@
-import "dart:io";
-
 void main() {
   num n1 = 50; // <-- первое число
   num n2 = 125; // <-- второе число
