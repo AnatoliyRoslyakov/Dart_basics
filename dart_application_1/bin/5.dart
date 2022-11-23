@@ -1,5 +1,18 @@
 void main(List<String> args) {
-  var wordsList = ['a', 'b', 'a', 'a', 'one', 'one', 'one', 'three', 'six'];
+  var wordsList = [
+    'one',
+    'пока',
+    'пока',
+    'one',
+    'one',
+    'three',
+    'five',
+    'nine',
+    'Eight',
+    'nIne',
+    'NINE',
+    'n1ne'
+  ];
   Set<int> findNumNamesIn(List<String> stringList) {
     const intNames = {
       'one': 1,

@@ -1,17 +1,16 @@
 void main() {
-  var wordsList = ['a', 'b', 'a', 'a', 'one', 'one', 'one', 'three', 'six'];
+  var wordsList = ['привет', 'пока', 'привет', 'привет', 'привет', 'пока'];
   // Строка в лист
   // Возврат индекса строки
   List<num> findNumsIn(String string) {
     List<String> words = string.split(" ");
-    List<num> numsList = [1245656];
+    List<num> numsList = [];
     for (var word in words) {
       num? number = int.tryParse(word);
       if (number != null) {
         numsList.add(number);
       }
     }
-    print(numsList);
     return numsList;
   }
 

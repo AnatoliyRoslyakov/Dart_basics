@@ -1,5 +1,11 @@
 import 'dart:math';
 
+void main(List<String> args) {
+  var point = Point(0, 5, 0); // <-- a
+  point.distanceTo(
+      Point(5, 15, 5), Point(10, 30, 10)); // <-- расстояние до b, площадь S
+}
+
 class Point {
   final num x;
   final num y;
@@ -9,7 +15,6 @@ class Point {
   void distanceTo(Point another, Point square) {
     var ab = sqrt(
         pow(another.x - x, 2) + pow(another.y - y, 2) + pow(another.z - z, 2));
-    print(ab);
     var bc = sqrt(
         pow(x - square.x, 2) + pow(y - square.y, 2) + pow(z - square.z, 2));
     var ac = sqrt(pow(another.x - square.x, 2) +
@@ -24,10 +29,4 @@ class Point {
   factory Point.zero() {
     return Point(0, 0, 0);
   }
-}
-
-void main(List<String> args) {
-  var point = Point(0, 5, 0); // <-- a
-  point.distanceTo(
-      Point(5, 15, 5), Point(10, 30, 10)); // <-- расстояние до b, площадь S
 }
